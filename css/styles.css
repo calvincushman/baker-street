@@ -33,30 +33,35 @@ body {
 
 .logo > img:first-child {
   position: absolute;
-  top: 115px;
+  top: 93px;
   left: 50%;
   transform: translatex(-50%);
+  height: 55px;
 }
 
 .logo > img:nth-child(2) {
   margin-left: 50%;
   transform: translateX(-50%);
+  height: 230px;
 }
 
 ul {
+  float: right;
   padding: 0;
-  width: 60%;
+  width: 65%;
 }
 
 li {
   float: left;
   display: inline;
-  border-bottom: 1px solid #898684;
+  border-bottom: 2px solid #d1cdc7;
   color: #890101;
   text-align: center;
   list-style: none;
   text-transform: uppercase;
   width: 30%;
+  margin: 1.5%;
+  padding-bottom: 25px;
 }
 
 li > p {
@@ -68,6 +73,18 @@ li > h5 {
   font-size: .95em;
   letter-spacing: .1em;
   margin: 0;
+}
+
+.col-right {
+  float: right;
+  width: 65%;
+}
+
+.col-right h3 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 400;
+  margin: 15px 0 5px 0;
 }
 
 #body-text {
@@ -105,15 +122,19 @@ li > h5 {
   position: absolute;
 }
 
-.people > img {
-  border-radius: 10px;
-  box-shadow: 1px 3px 2px gray;
-}
-
 .people {
+  float: left;
   text-align: center;
   color: #890101;
   text-transform: uppercase;
+  width: 16.5%;
+  padding: 0 1.5%;
+}
+
+.people > img {
+  border-radius: 10px;
+  box-shadow: 1px 3px 2px gray;
+  width: 100%;
 }
 
 .people > p {
@@ -158,6 +179,7 @@ li > h5 {
 @media screen and (max-width: 1299px) {
 
   .col-right {
+    float: none;
     width: 65%;
     margin-left: 33%;
   }
@@ -167,6 +189,19 @@ li > h5 {
     width: 30%;
     margin-left: 3%;
     min-width: 178px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo > img:first-child {
+    top: 112px;
+    height: auto;
+  }
+
+  .logo > img:nth-child(2) {
+    height: auto;
   }
 
   ul {
@@ -183,6 +218,7 @@ li > h5 {
   }
 
   li {
+    border-bottom: 1px solid #898684;
     display: block;
     float: none;
     padding: 20px 0;
@@ -190,9 +226,6 @@ li > h5 {
   }
 
   .col-right h3 {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 400;
     margin: 110px 0 0 0;
   }
 
@@ -201,16 +234,8 @@ li > h5 {
   }
 
   .people {
-    float: left;
     width: 33%;
-  }
-
-  .col1 {
-    padding: 0 5px 0 10px;
-  }
-
-  .col2 {
-    padding: 0 10px 0 5px;
+    padding: 0 1.5%;
   }
 }
 
