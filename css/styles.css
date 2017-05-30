@@ -20,22 +20,60 @@ body {
     background-repeat: repeat-x;;
     background-image: url("../img/rag.png");
     padding: 2em 0;
+    height: 100%;
+    /*border: solid red 3px;*/
 }
 
-.columns {
-  min-height: 100px;
+.logo {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-left: 8%;
+}
+
+.logo > img:first-child {
+  position: absolute;
+  top: 115px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.logo > img:nth-child(2) {
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 ul {
-  border-top: 1px solid #898684;
   padding: 0;
+  width: 60%;
 }
 
 li {
+  float: left;
+  display: inline;
   border-bottom: 1px solid #898684;
   color: #890101;
   text-align: center;
   list-style: none;
+  text-transform: uppercase;
+  width: 30%;
+}
+
+li > p {
+  font-size: .7em;
+  margin: 0;
+}
+
+li > h5 {
+  font-size: .95em;
+  letter-spacing: .1em;
+  margin: 0;
+}
+
+#body-text {
+  margin: 0 13px 10px 13px;
+  font-size: 1.1em;
+  line-height: 1.35em;
 }
 
 #ornament-top {
@@ -117,7 +155,82 @@ li {
   display: none;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 1299px) {
+
+  .col-right {
+    width: 65%;
+    margin-left: 33%;
+  }
+
+  .col-left {
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+    min-width: 178px;
+  }
+
+  ul {
+    border-top: 1px solid #898684;
+    float: none;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo {
+    float: none;
+    width: 100%;
+  }
+
+  li {
+    display: block;
+    float: none;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .col-right h3 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 110px 0 0 0;
+  }
+
+  .people > img {
+    width: 100%;
+  }
+
+  .people {
+    float: left;
+    width: 33%;
+  }
+
+  .col1 {
+    padding: 0 5px 0 10px;
+  }
+
+  .col2 {
+    padding: 0 10px 0 5px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+
+  .col-right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .col-right h3 {
+    margin: 0 0 .3em 0;
+    font-size: 1.5em;
+  }
+
+  .col-left {
+    width: 100%;
+    margin: 0 15px;
+  }
+
   #logo-lg, #logo-bg {
     display: none;
   }
@@ -131,7 +244,8 @@ li {
   }
 
   ul {
-    margin: 0 15px;
+    width: 100%;
+    margin-top: 0;
   }
 
   li {
@@ -145,6 +259,10 @@ li {
     padding: 10px 20px;
   }
 
+  li h5 {
+    font-weight: 400;
+  }
+
   li:nth-child(2) {
     margin: 0 10px;
   }
@@ -155,12 +273,9 @@ li {
     font-weight: 400;
     font-size: 1.4em;
   }
+}
 
-  p {
-    margin: 0 13px;
-    font-size: 1.1em;
-    line-height: 1.35em;
-  }
+@media screen and (max-width:400px) {
 
   .people > img {
     width: 100%;
