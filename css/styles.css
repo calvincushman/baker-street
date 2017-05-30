@@ -1,8 +1,92 @@
-*:not(body):not(html) {
+/**:not(body):not(html) {
   box-sizing:border-box;
   border:1px dashed #000;
+}*/
+
+body {
+  background-color: #e7e7e7;
+  margin: 0;
+}
+
+#page {
+    background-repeat: repeat-x;;
+    background-image: url("../img/rag.png");
+    padding: 2em 0;
 }
 
 .columns {
   min-height: 100px;
+}
+
+ul {
+  border-top: 1px solid #898684;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #898684;
+  color: #890101;
+  text-align: center;
+  list-style: none;
+}
+
+@media screen and (max-width:400px) {
+  #logo-lg, #logo-bg {
+    display: none;
+  }
+
+  #logo-sm {
+    margin-left: 50%;
+    transform: translatex(-50%);
+    margin-top: 28px;
+    padding-bottom: 10px;
+  }
+
+  ul {
+    margin: 0 15px;
+  }
+
+  li {
+    display: inline;
+    float: left;
+    font-size: .65em;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin: 0;
+    width: 20%;
+    padding: 10px 20px;
+  }
+
+  li:nth-child(2) {
+    margin: 0 10px;
+  }
+
+  h3 {
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.4em;
+  }
+
+  p {
+    margin: 0 13px;
+    font-size: 1.1em;
+    line-height: 1.35em;
+
+  }
+
+  #ornament-top {
+    position: relative;
+    overflow: hidden;
+    width: 360px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #victors {
+    position: absolute;
+    /*top: 50%;*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
